@@ -1,55 +1,77 @@
-._menu-top,
-._menu-bot {
-  @include flex-all-sb;
-  justify-content: space-between;
-}
-.menu {
-  @include flex-v-center;
-
-  &-item {
-    position: relative;
+.site-header {
+  .container > * {
+    @include flex-all-sb;
+  }
+  .menu {
     @include flex-v-center;
-    height: 69px;
-    padding: 0 10px;
+    margin: 0;
+  }
 
-    & a {
+  .top .menu {
+    &-item {
+      position: relative;
       @include flex-v-center;
-      height: 100%;
+      height: 69px;
+      padding: 0 10px;
+      color: #00a594;
 
-      & svg{
-        padding-right:5px;
+      & a {
+        @include flex-v-center;
+        height: 100%;
+
+        & svg {
+          padding-right: 5px;
+        }
+      }
+      &:hover:not(.ico) {
+        background-color: var(--accent-color);
+        color: #fff;
+      }
+      &:hover a svg path[fill],
+      & a:hover svg path[fill] {
+        fill: var(--dark-light-color);
+      }
+      &:hover + .menu-item::before {
+        opacity: 0;
+      }
+
+      &.last::after,
+      &::before,
+      &:last-child::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 50%;
+        border-left: 1px solid var(--accent-color);
+        width: 0;
+      }
+      &.last::after,
+      &:last-child::after {
+        right: 0;
+        left: auto;
+      }
+      &.ico::before,
+      &.ico:not(.last)::after {
+        display: none;
       }
     }
-    &:hover:not(.ico){
-      background-color: var(--accent-color);
+  }
+
+  .bot .menu {
+    padding: 17px 0;
+    &-item {
+      padding-right: 20px;
+      color: #00a594;
+      &:hover {
+        color: #013e37;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+      }
     }
-    &:hover a svg path[fill],
-    & a:hover svg path[fill]{
-      fill: var(--dark-color);
-    }
-    &:hover + .menu-item::before{
-      opacity: 0;
+    &.soc{
+      text-transform: uppercase;
     }
   }
-}
-.menu-item.last::after,
-.menu-item::before,
-.menu-item:last-child::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 50%;
-  border-left: 1px solid var(--accent-color);
-  width: 0;
-}
-.menu-item.last::after,
-.menu-item:last-child::after {
-  right: 0;
-  left: auto;
-}
-.menu-item.ico::before,
-.menu-item.ico:not(.last)::after {
-  display: none;
 }
