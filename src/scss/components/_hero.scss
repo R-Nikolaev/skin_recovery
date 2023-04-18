@@ -1,0 +1,104 @@
+.hero {
+  padding-top: 130px;
+  &_slide {
+    @include flex-all-center;
+    flex-direction: column;
+    position: relative;
+  }
+  .slide_text {
+    @include flex-v-center;
+    flex-direction: column;
+    max-width: 943px;
+
+    font-family: "DM Serif Text";
+    font-style: normal;
+    font-weight: 400;
+    color: #013e37;
+    & h1,
+    h3 {
+      margin: 0;
+    }
+    & h1 {
+      font-size: 150px;
+    }
+    & h3 {
+      padding-bottom: 15px;
+
+      font-size: 20px;
+      line-height: 12px;
+    }
+  }
+  .slide_shadowtext,
+  .slide_shadowtext img{
+width: 100%;
+max-height: 480px;
+  }
+
+  //ПРОБНЫЙ ВАРИАНТ
+  .slide_shadowtext{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
+    z-index: -1;
+  }
+  .slide_shadowtext img{
+object-fit: none;
+  }
+
+}
+//   padding-top: 130px;
+//   &_slide {
+//     @include flex-all-center;
+//     flex-direction: column;
+
+//     position: relative;
+//     &_text {
+//       @include flex-v-center;
+//       flex-direction: column;
+//       max-width: 943px;
+//       & h1{
+// margin: 0;
+
+// font-family: "DM Serif Text";
+// font-weight: 400;
+// font-size: 150px;
+// color: #013e37;
+//       }
+//       & h3{
+// margin: 0;
+// padding-bottom: 15px;
+
+// font-family: "DM Serif Text";
+// font-style: normal;
+// font-weight: 400;
+// font-size: 20px;
+// line-height: 12px;
+// color: #013e37;
+//       }
+//     }
+//     &_shadowtext {
+// position: absolute;
+// left: 0;
+// top: 55px;
+// z-index: -1;
+//       &__text {
+// font-family: "DM Serif Text";
+// font-weight: 400;
+// font-size: 480px;
+// color: #f9f9f9;
+//       }
+//     }
+//   }
+//   &__slide__btn::after {
+//     position: absolute;
+//     color: var(--accent-color);
+//     font-size: 24px;
+//   }
+//   &__slide__btn--prev::after {
+//     left: 80px;
+//   }
+//   &__slide__btn--next::after {
+//     right: 80px;
+//   }
+// }

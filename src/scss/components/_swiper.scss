@@ -1,0 +1,12 @@
+
+.swiper-pagination-bullet {
+border: 1px solid var(--accent-color);
+background: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--accent-color);
+}
+.swiper-horizontal > .swiper-pagination-bullets{
+  bottom: 0;
+}
