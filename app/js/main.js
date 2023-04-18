@@ -120,16 +120,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
-const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
-  slidesPerView: 'auto',
-  loop: 'true',
+const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper", {
+  slidesPerView: "auto",
+  loop: "true",
   pagination: {
-    el: '.intro__slide__pagination'
+    el: ".swiper-pagination"
   },
-  // Navigation arrows
   navigation: {
-    nextEl: '.intro__slide__btn--next',
-    prevEl: '.intro__slide__btn--prev'
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
   }
 });
 

@@ -14,6 +14,7 @@
       height: 69px;
       padding: 0 10px;
       color: #00a594;
+      transition: color .2s linear,background-color .2s linear,fill .2s linear;
 
       & a {
         @include flex-v-center;
@@ -64,6 +65,7 @@
     &-item {
       padding-right: 20px;
       color: #00a594;
+      transition:color .2s linear,text-decoration .2s linear,;
       &:hover {
         color: #013e37;
         text-decoration: underline;

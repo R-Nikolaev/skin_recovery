@@ -234,6 +234,9 @@ a {
   height: 69px;
   padding: 0 10px;
   color: #00a594;
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, fill 0.2s linear;
+  -o-transition: color 0.2s linear, background-color 0.2s linear, fill 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, fill 0.2s linear;
 }
 .site-header .top .menu-item a {
   display: -webkit-box;
@@ -282,6 +285,11 @@ a {
 .site-header .bot .menu-item {
   padding-right: 20px;
   color: #00a594;
+  -webkit-transition: color 0.2s linear, -webkit-text-decoration 0.2s linear;
+  transition: color 0.2s linear, -webkit-text-decoration 0.2s linear;
+  -o-transition: color 0.2s linear, text-decoration 0.2s linear;
+  transition: color 0.2s linear, text-decoration 0.2s linear;
+  transition: color 0.2s linear, text-decoration 0.2s linear, -webkit-text-decoration 0.2s linear;
 }
 .site-header .bot .menu-item:hover {
   color: #013e37;
@@ -294,6 +302,8 @@ a {
 
 .hero {
   padding-top: 130px;
+  position: relative;
+  overflow-x: hidden;
 }
 .hero_slide {
   display: -webkit-box;
@@ -339,17 +349,19 @@ a {
   font-size: 20px;
   line-height: 12px;
 }
-.swiper-pagination-bullet {
-  border: 1px solid var(--accent-color);
-  background: #fff;
+.hero .slide_shadowtext {
+  position: absolute;
+  left: 0;
+  bottom: -7%;
+  z-index: -1;
+}
+.hero .slide_shadowtext img {
+  max-width: none;
 }
 
-.swiper-pagination-bullet-active {
-  background: var(--accent-color);
-}
-
-.swiper-horizontal > .swiper-pagination-bullets {
-  bottom: 0;
+.swiper-button::after {
+  color: var(--accent-color);
+  font-size: 24px;
 }
 /*# sourceMappingURL=main.css.map */
 /*# sourceMappingURL=main.css.map */

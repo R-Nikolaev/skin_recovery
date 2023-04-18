@@ -1,18 +1,14 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from "swiper";
 Swiper.use([Navigation, Pagination]);
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 'auto',
-  loop:'true',
+const swiper = new Swiper(".swiper", {
+  slidesPerView: "auto",
+  loop: "true",
 
   pagination: {
-    el: '.intro__slide__pagination',
+    el: ".swiper-pagination",
   },
-
-  // Navigation arrows
   navigation: {
-    nextEl: '.intro__slide__btn--next',
-    prevEl: '.intro__slide__btn--prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-
 });
-
