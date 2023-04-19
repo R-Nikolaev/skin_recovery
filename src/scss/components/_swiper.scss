@@ -1,5 +1,13 @@
-
-.swiper-button::after {
+.swiper{
+  .swiper-button::after {
     color: var(--accent-color);
     font-size: 24px;
   }
+  .swiper-pagination-bullet{
+    bottom: 0;
+   &-active{
+      background-color: var(--accent-color);
+    }
+  }
+}
+
