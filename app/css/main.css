@@ -343,7 +343,7 @@ a {
   margin: 0;
 }
 .hero .slide_text h1 {
-  font-size: calc(40px + 110 * (100vw - 320px) / 945);
+  font-size: 150px;
 }
 .hero .slide_text h3 {
   padding-bottom: 15px;
@@ -399,17 +399,15 @@ a {
   display: flex;
 }
 .info .top {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
   padding: 220px 0 68px;
-}
-.info .top .left,
-.info .top .right {
-  min-width: 48%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .info .top .left {
   position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 505px;
   height: 505px;
   background-color: #adcbc6;
@@ -432,7 +430,7 @@ a {
   color: #fff;
 }
 .info .top .right {
-  padding: 0 70px;
+  max-width: 50%;
 }
 .info .top .right .top-r p {
   font-family: "Montserrat";
@@ -455,10 +453,10 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
-  border-top: 1px solid #8FC2BC;
+  border-top: 1px solid #8fc2bc;
 }
 .info .top .right .bottom-r .bottom-item-r:last-child {
-  border-bottom: 1px solid #8FC2BC;
+  border-bottom: 1px solid #8fc2bc;
 }
 .info .top .right .bottom-r .bottom-item-r p {
   font-size: 18px;
@@ -470,9 +468,9 @@ a {
   font-size: 20px;
 }
 .info .bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .info .bottom-item {
   width: 48%;
@@ -486,10 +484,8 @@ a {
   right: 0;
   top: 0;
   padding: 82px 64px;
-  background-color: #ADCBC6;
+  background-color: #adcbc6;
   border: none;
-}
-.btn-info a {
   color: #fff;
   font-size: 20px;
 }
