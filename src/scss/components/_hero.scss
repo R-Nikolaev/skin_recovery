@@ -13,7 +13,6 @@
       @include flex-v-center;
       flex-direction: column;
       text-align: center;
-      height: 30%;
 
       font-family: "DM Serif Text";
       font-style: normal;
@@ -27,6 +26,12 @@
 
       h1 {
         font-size: 150px;
+        @include media("<xl") {
+          font-size: 120px;
+        }
+        @include media("<lg") {
+          font-size: 80px;
+        }
       }
 
       h3 {
@@ -37,25 +42,25 @@
       }
     }
 
-    &_image,
-    &_btn,
-    &_shadowtext {
+    &_image{
       position: absolute;
       left: 50%;
       bottom: 3%;
       transform: translateX(-50%);
     }
-    &_btn{
+    &_btn {
+      position: absolute;
       bottom: 7%;
       padding: 2% 3%;
       background-color: #013e37;
       border-radius: 10px;
-      a{
+      a {
         color: #fff;
         text-transform: uppercase;
       }
     }
     &_shadowtext {
+      position: absolute;
       left: 0;
       top: 30%;
       z-index: -1;

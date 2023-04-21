@@ -1,3 +1,19 @@
+//? for  _include-media.scss
+$breakpoints: (
+  'es': 360px,
+  'sm': 567px,
+  'md': 768px,
+  'ml': 820px,
+  'lg': 992px,
+  'll': 1024px,
+  'xl': 1200px,
+  'xxl': 1260px,
+  'dk': 1920px,
+  'd2k': 2560px,
+);
+$im-no-media-breakpoint: 'xxl';
+@import '../../node_modules/include-media/dist/_include-media.scss';
+
 // базовые подключения
 @import "vars";
 @import "mixins";
@@ -9,4 +25,5 @@
 @import "./components/menu";
 @import "./components/hero";
 @import "./components/swiper";
-@import "./components/info";
+@import "./components/about_us";
+
