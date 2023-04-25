@@ -1,0 +1,111 @@
+.section_result {
+  padding: 95px 0 50px;
+  background-color: #edf8f6;
+  .top {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    padding-bottom: 300px;
+  }
+  .left {
+    grid-column: 1 / 6;
+    grid-row: 1;
+
+    background-color: #adcbc6;
+    width: 95%;
+    height: 120%;
+    max-height: 422px;
+    position: relative;
+    img,
+    p {
+      max-width: 90%;
+
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    img {
+      top: 20%;
+    }
+    p {
+      width: 100%;
+      bottom: -210px;
+
+      font-family: "Liana";
+      font-weight: 400;
+      font-size: 100px;
+    }
+  }
+  .center {
+    grid-column: 6 / 11;
+    grid-row: 1;
+    padding: 0 10px;
+
+    h5 {
+      font-family: "Gabriola";
+      font-weight: 400;
+      font-size: 120px;
+      color: #013e37;
+      line-height: 0.6;
+    }
+    .list {
+      padding-top: 90px;
+      @include media("<xl") {
+        padding-top: 30px;
+      }
+      li {
+        @include flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        position: relative;
+        border-top: 1px solid #8fc2bc;
+        &:last-child {
+          border-bottom: 1px solid #8fc2bc;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 400;
+          &:first-child {
+            font-family: "Montserrat";
+            font-weight: 600;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    grid-column: 11 / -1;
+    grid-row: 1;
+    img {
+      width: 100%;
+      height: auto;
+      padding-left: 20%;
+    }
+  }
+  .bottom {
+    .slider_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 545px;
+      width: 267px;
+      img {
+      }
+      h5,
+      p {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 20px;
+        color: #013e37;
+      }
+      p {
+        text-align: left;
+        margin-left: 10px;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+}

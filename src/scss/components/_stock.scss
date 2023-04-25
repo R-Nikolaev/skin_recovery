@@ -1,0 +1,63 @@
+.section_stock {
+  padding-top: 70px;
+  background-color: #edf8f6;
+  .title {
+    padding-bottom: 50px;
+  }
+  .slider_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    width: 267px;
+  }
+  .slider_image {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    svg {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  h5,
+  p {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .desc {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .price {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: right;
+  }
+
+}
+.section_title {
+  font-family: "Gabriola";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 120px;
+  color: #013e37;
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 184px;
+  height: 62px;
+  background-color: #013E37;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}

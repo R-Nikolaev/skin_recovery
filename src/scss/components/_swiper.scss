@@ -10,4 +10,24 @@
     }
   }
 }
+.swiper_stock{
+height: 650px;
+}
 
+.swiper_service{
+  height: 550px;
+  .swiper-wrapper{
+    padding-top: 50px;
+  }
+  .swiper-button::after {
+    color:#200E32;
+    font-size: 20px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next{
+top: 4%;
+  }
+  .swiper-button-prev{
+    left:90%;
+  }
+}
