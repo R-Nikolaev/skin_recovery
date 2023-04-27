@@ -1,0 +1,91 @@
+.section_write_us {
+  background-color: #edf8f6;
+  margin-top: -4px;
+  height: 800px;
+@include media('<xl') {
+  height: 600px;
+}
+@include media('<ll') {
+  height: 500px;
+}
+  .ctr {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 100%;
+  }
+  .left {
+    grid-column: 1 / 7;
+    grid-row: 1;
+    background-color: #adcbc6;
+    position: relative;
+    .form {
+      width: 90%;
+      padding: 10% 0 10% 8%;
+      display: flex;
+      flex-direction: column;
+      @include media('<xl') {
+        padding: 15% 0 15% 8%;
+      }
+      h3 {
+        color: #fff;
+      }
+      input {
+        padding: 30px 0 6px;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #fff;
+        border-radius: none;
+        box-shadow: none;
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 18px;
+        color: #ffffff;
+        @include media('<xl') {
+          font-size: 12px;
+        }
+        &::placeholder {
+          color: #fff;
+        }
+      }
+      .form-message{
+        padding-top:66px;
+        @include media('<xl') {
+         padding-top: 50px;
+        }
+      }
+      .btn{
+        position: absolute;
+        bottom: 20%;
+        right: 10%;
+        @include media('<ll') {
+          bottom: 8%;
+        }
+      }
+    }
+  }
+  .right {
+    position: relative;
+    grid-column: 7 / -1;
+    grid-row: 1;
+
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%,-50%,0);
+      @include media('<xl') {
+        width: 50%;
+      }
+    }
+    p{
+      color: #013E37;
+      position: absolute;
+      top: 72%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include media('<ll') {
+        top: 68%;
+      }
+    }
+  }
+}

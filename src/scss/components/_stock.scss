@@ -1,20 +1,26 @@
 .section_stock {
   padding-top: 70px;
   background-color: #edf8f6;
+  @include media('<xl') {
+    padding-top: 40px;
+  }
   .title {
     padding-bottom: 50px;
   }
-  .slider_content{
+  .slider_content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 600px;
     width: 267px;
+    @include media('<xl') {
+      height: 400px;
+      width: 200px;
+    }
   }
   .slider_image {
     position: relative;
     width: 100%;
-    height: 60%;
     svg {
       position: absolute;
       right: 10px;
@@ -22,42 +28,75 @@
     }
   }
 
-  h5,
-  p {
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-size: 20px;
-  }
-
   .desc {
     font-weight: 400;
     font-size: 16px;
+    @include media('<xl') {
+      font-size: 10px;
+    }
   }
   .price {
-    font-weight: 600;
-    font-size: 20px;
     text-align: right;
   }
-
 }
 .section_title {
   font-family: "Gabriola";
   font-style: normal;
   font-weight: 400;
   font-size: 120px;
+  line-height: 0.6;
   color: #013e37;
+
+  @include media('<xl') {
+    font-size: 75px;
+  }
 }
 
-.btn{
+.btn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 184px;
   height: 62px;
-  background-color: #013E37;
+  background-color: #013e37;
   border: none;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
   border-radius: 10px;
+
+  @include media('<xl') {
+    font-size: 10px;
+    width: 127px;
+    height: 40px;
+  }
+}
+
+.kursiv {
+  font-family: "Liana";
+  font-weight: 400;
+  font-size: 100px;
+  white-space: nowrap;
+  @include media('<xl') {
+    font-size: 80px;
+  }
+  @include media('<ll') {
+      font-size: 60px;
+  }
+}
+
+.fz20m{
+  font-size: 20px;
+  font-weight: 600;
+  font-family:"Montserrat";
+  @include media("<xl") {
+    font-size: 13px;
+  }
+}
+.effect{
+  font-size: 18px;
+  font-weight: 400;
+  @include media("<xl") {
+    font-size: 12px;
+  }
 }

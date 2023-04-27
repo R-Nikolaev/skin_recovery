@@ -13,6 +13,9 @@
   }
   .top {
     padding: 220px 0 68px;
+    @include media("<xl") {
+      padding: 160px 0 40px;
+    }
 
     .left {
       position: relative;
@@ -43,11 +46,6 @@
       }
       p {
         bottom: 87px;
-        margin: 0;
-
-        font-family: "Liana";
-        font-weight: 400;
-        font-size: 100px;
         color: #fff;
 
         @include media("<xl") {
@@ -65,18 +63,18 @@
     }
     .right .text {
       p {
-        font-family: "Montserrat";
+        font-family: "Gabriola";
         font-weight: 400;
-        font-size: 27px;
+        font-size: 35px;
         margin: 0;
         @include media("<xl") {
-          font-size: 22px;
+          font-size: 24px;
         }
         span {
           font-family: "DM Serif Text";
           font-size: 45px;
           @include media("<xl") {
-            font-size: 35px;
+            font-size: 30px;
           }
         }
       }
@@ -89,27 +87,15 @@
       li {
         @include flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
         position: relative;
         border-top: 1px solid #8fc2bc;
         &:last-child {
           border-bottom: 1px solid #8fc2bc;
         }
-
-        p {
-          font-size: 18px;
-          font-weight: 400;
-          &:first-child {
-            font-family: "Montserrat";
-            font-weight: 600;
-            font-size: 20px;
-            @include media("<xl") {
-              font-size: 13px;
-            }
-          }
-          @include media("<xl") {
-            margin: 10px 0;
-            font-size: 12px;
-          }
+        @include media('<xl') {
+          padding: 5px 0;
         }
       }
     }

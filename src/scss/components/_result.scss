@@ -1,5 +1,5 @@
 .section_result {
-  padding: 95px 0 50px;
+  padding: 95px 0 70px;
   background-color: #edf8f6;
   .top {
     display: grid;
@@ -10,12 +10,13 @@
   .left {
     grid-column: 1 / 6;
     grid-row: 1;
-
     background-color: #adcbc6;
     width: 95%;
-    height: 120%;
     max-height: 422px;
     position: relative;
+    @include media("<xl") {
+      max-height: 295px;
+    }
     img,
     p {
       max-width: 90%;
@@ -23,17 +24,20 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+      @include media("<xl") {
+        max-width: 78%;
+      }
     }
     img {
       top: 20%;
     }
     p {
       width: 100%;
-      bottom: -210px;
-
-      font-family: "Liana";
-      font-weight: 400;
-      font-size: 100px;
+      bottom: -228px;
+      color: #013e37;
+      @include media("<ll") {
+        bottom: -154px;
+      }
     }
   }
   .center {
@@ -41,13 +45,6 @@
     grid-row: 1;
     padding: 0 10px;
 
-    h5 {
-      font-family: "Gabriola";
-      font-weight: 400;
-      font-size: 120px;
-      color: #013e37;
-      line-height: 0.6;
-    }
     .list {
       padding-top: 90px;
       @include media("<xl") {
@@ -56,20 +53,15 @@
       li {
         @include flex;
         justify-content: space-between;
+        align-items: center;
         padding: 10px 0;
         position: relative;
         border-top: 1px solid #8fc2bc;
         &:last-child {
           border-bottom: 1px solid #8fc2bc;
         }
-        p {
-          font-size: 18px;
-          font-weight: 400;
-          &:first-child {
-            font-family: "Montserrat";
-            font-weight: 600;
-            font-size: 20px;
-          }
+        @include media('<xl') {
+          padding: 5px 0;
         }
       }
     }
@@ -91,13 +83,13 @@
       justify-content: space-between;
       height: 545px;
       width: 267px;
-      img {
+
+      @include media("<xl") {
+        width: 200px;
+        height: 400px;
       }
       h5,
       p {
-        font-family: "Montserrat";
-        font-weight: 600;
-        font-size: 20px;
         color: #013e37;
       }
       p {
@@ -105,6 +97,9 @@
         margin-left: 10px;
         font-weight: 400;
         font-size: 16px;
+        @include media('<xl') {
+          font-size: 10px;
+        }
       }
     }
   }
