@@ -318,39 +318,29 @@ a {
   position: relative;
   overflow-x: hidden;
 }
-.hero_slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.hero-slide {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+  grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (1fr)[12];
+  grid-template-rows: repeat(12, 1fr);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 650px;
 }
 .hero .slide_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/span 12;
+  -ms-grid-row: 1;
+  grid-row: 1;
   font-family: "DM Serif Text";
   font-style: normal;
   font-weight: 400;
   color: #013e37;
-}
-.hero .slide_text h1,
-.hero .slide_text h3 {
-  margin: 0;
+  text-align: center;
 }
 .hero .slide_text h1 {
   font-size: 150px;
@@ -371,19 +361,28 @@ a {
   line-height: 12px;
 }
 .hero .slide_image {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 11;
+  grid-column: 2/span 11;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 10;
+  grid-row: 2/span 10;
+  position: relative;
+}
+.hero .slide_image img {
   position: absolute;
   left: 50%;
-  bottom: 3%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  top: 50%;
+  z-index: -1;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
 }
 .hero .slide_btn {
-  position: absolute;
-  bottom: 7%;
-  padding: 2% 3%;
-  background-color: #013e37;
-  border-radius: 10px;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 7;
+  grid-column: 6/span 7;
+  -ms-grid-row: 11;
+  grid-row: 11;
 }
 .hero .slide_btn a {
   color: #fff;

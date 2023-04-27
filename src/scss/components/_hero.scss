@@ -2,28 +2,23 @@
   padding: 130px 0 10px;
   position: relative;
   overflow-x: hidden;
-
-  &_slide {
-    @include flex-v-center;
-    flex-direction: column;
-    height: 650px;
+  &-slide {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12,1fr);
+    justify-content: center;
+          height: 650px;
   }
   .slide {
     &_text {
-      @include flex-v-center;
-      flex-direction: column;
-      text-align: center;
+      grid-column: 1 /span 12;
+      grid-row: 1;
 
       font-family: "DM Serif Text";
       font-style: normal;
       font-weight: 400;
       color: #013e37;
-
-      h1,
-      h3 {
-        margin: 0;
-      }
-
+      text-align: center;
       h1 {
         font-size: 150px;
         @include media("<xl") {
@@ -33,27 +28,77 @@
           font-size: 80px;
         }
       }
+              h3 {
+          padding-bottom: 15px;
 
-      h3 {
-        padding-bottom: 15px;
-
-        font-size: 20px;
-        line-height: 12px;
+          font-size: 20px;
+          line-height: 12px;
+        }
+    }
+    &_image {
+      grid-column: 2 /span 11;
+      grid-row: 2/span 10;
+      position: relative;
+      img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        transform: translate3d(-50%,-50%,0);
       }
     }
+    // &_slide {
+    //   @include flex-v-center;
+    //   flex-direction: column;
+    //   height: 650px;
+    // }
+    // .slide {
+    //   &_text {
+    //     @include flex-v-center;
+    //     flex-direction: column;
+    //     text-align: center;
 
-    &_image{
-      position: absolute;
-      left: 50%;
-      bottom: 3%;
-      transform: translateX(-50%);
-    }
+    //     font-family: "DM Serif Text";
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     color: #013e37;
+
+    //     h1 {
+    //       font-size: 150px;
+    //       @include media("<xl") {
+    //         font-size: 120px;
+    //       }
+    //       @include media("<lg") {
+    //         font-size: 80px;
+    //       }
+    //     }
+
+    //     h3 {
+    //       padding-bottom: 15px;
+
+    //       font-size: 20px;
+    //       line-height: 12px;
+    //     }
+    //   }
+
+    //   &_image{
+    //     position: absolute;
+    //     left: 50%;
+    //     bottom: 3%;
+    //     transform: translateX(-50%);
+    //   }
     &_btn {
-      position: absolute;
-      bottom: 7%;
-      padding: 2% 3%;
-      background-color: #013e37;
-      border-radius: 10px;
+      grid-column: 6 /span 7;
+      grid-row: 11;
+      // position: absolute;
+      // left: 50%;
+      // bottom: 10%;
+      // transform: translateX(-50%);
+      // position: absolute;
+      // bottom: 7%;
+      // padding: 2% 3%;
+      // background-color: #013e37;
+      // border-radius: 10px;
       a {
         color: #fff;
         text-transform: uppercase;
