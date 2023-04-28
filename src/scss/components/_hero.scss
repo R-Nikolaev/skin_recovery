@@ -6,7 +6,6 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    justify-content: center;
     height: 650px;
   }
   .slide {
@@ -85,23 +84,6 @@
     //     bottom: 3%;
     //     transform: translateX(-50%);
     //   }
-    &_btn {
-      grid-column: 6 / span 7;
-      grid-row: 11;
-      // position: absolute;
-      // left: 50%;
-      // bottom: 10%;
-      // transform: translateX(-50%);
-      // position: absolute;
-      // bottom: 7%;
-      // padding: 2% 3%;
-      // background-color: #013e37;
-      // border-radius: 10px;
-      a {
-        color: #fff;
-        text-transform: uppercase;
-      }
-    }
     &_shadowtext {
       position: absolute;
       left: 0;
@@ -110,6 +92,23 @@
       img {
         max-width: none;
       }
+    }
+  }
+  .btn {
+    grid-column: 6 / span 7;
+    grid-row: 11;
+    // position: absolute;
+    // left: 50%;
+    // bottom: 10%;
+    // transform: translateX(-50%);
+    // position: absolute;
+    // bottom: 7%;
+    // padding: 2% 3%;
+    // background-color: #013e37;
+    // border-radius: 10px;
+    a {
+      color: #fff;
+      text-transform: uppercase;
     }
   }
 }
