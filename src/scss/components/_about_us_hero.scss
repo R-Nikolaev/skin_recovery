@@ -1,0 +1,50 @@
+.section_about_us_hero {
+  padding: 140px 0 80px;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/8;
+    &-header{
+position: relative;
+height: 50%;
+img{
+  max-width: 295px;
+  max-height: 329px;
+}
+      p{
+        position: absolute;
+        bottom: 0;
+       left: 50%;
+       transform: translateX(-50%);
+       color: #4F4C18;
+      }
+    }
+  }
+
+  .text{
+height: 50%;
+width: 98%;
+padding-top: 15px;
+p{
+  font-family: 'Gabriola';
+font-weight: 400;
+font-size: 18px;
+padding-top: 20px;
+&:first-child{
+  font-size: 35px;
+  color: #4F4C18;
+}
+}
+
+  }
+  .image{
+    grid-column:8/-1;
+    width: 100%;
+
+  }
+}
