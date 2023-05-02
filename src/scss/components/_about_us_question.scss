@@ -1,0 +1,64 @@
+.section_about_us_question {
+  padding: 35px 0 100px;
+  position: relative;
+  .container {
+    padding-right: 150px;
+  }
+  .section_title{
+    max-width: 60%;
+    line-height: .8;
+  }
+  .question {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    &-item {
+      display: flex;
+      flex-wrap: wrap;
+      border-top: 1px solid #ADCBC6;
+      &:last-child{
+        border-bottom: 1px solid #ADCBC6;
+      }
+      .item-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .quest {
+        color: #013e37;
+        padding: 15px 0;
+      }
+      .answer {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 16px;
+        color: #013E37;
+        padding-bottom: 15px;
+      }
+      button{
+        width: 20px;
+        height: 20px;
+        border: none;
+        background-color: inherit;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .btn-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    width: 150px;
+    height: 150px;
+    background-color: #adcbc6;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+  }
+}
