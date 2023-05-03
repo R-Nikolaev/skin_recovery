@@ -1,13 +1,40 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/_accordion.js":
+/*!******************************!*\
+  !*** ./src/js/_accordion.js ***!
+  \******************************/
+/***/ (() => {
+
+var accordion = function () {
+  var data = $(".accordion").attr("data-accordion");
+  $(".accordion-header").on("click", function () {
+    if (data === "close") {
+      $(".accordion-body").slideUp();
+      if ($(this).hasClass("active")) {
+        $(this).toggleClass("active");
+      } else {
+        $(".accordion-header").removeClass("active");
+        $(this).toggleClass("active");
+      }
+    } else {
+      $(this).toggleClass("active");
+    }
+    $(this).next("accordion-body").not(":animated").slideToggle();
+  });
+};
+accordion();
+
+/***/ }),
+
 /***/ "./src/js/_components.js":
 /*!*******************************!*\
   !*** ./src/js/_components.js ***!
   \*******************************/
 /***/ (() => {
 
-console.log('components');
+
 
 /***/ }),
 
@@ -13209,6 +13236,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_components */ "./src/js/_components.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _swiper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_swiper */ "./src/js/_swiper.js");
+/* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_accordion */ "./src/js/_accordion.js");
+/* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_accordion__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 

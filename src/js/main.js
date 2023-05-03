@@ -4,3 +4,6 @@ import './_functions';
 import './_components';
 
 import './_swiper';
+
+import './_accordion';
+
