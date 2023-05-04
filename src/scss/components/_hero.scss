@@ -89,18 +89,20 @@
       left: 0;
       top: 30%;
       z-index: -1;
+      @include media('>=d2k') {
+        left: 50%;
+        transform: translateX(-50%);
+      }
       img {
         max-width: none;
       }
     }
   }
   .btn {
-    grid-column: 6 / span 7;
-    grid-row: 11;
-    // position: absolute;
-    // left: 50%;
-    // bottom: 10%;
-    // transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
     // position: absolute;
     // bottom: 7%;
     // padding: 2% 3%;

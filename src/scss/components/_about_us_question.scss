@@ -4,7 +4,7 @@
   .container {
     padding-right: 150px;
   }
-  .accordion > * p {
+  .accordion > * span {
     font-family: "Montserrat";
     color: #013e37;
   }
@@ -15,33 +15,29 @@
         border-top: 1px solid #adcbc6;
       }
     }
-    &-header {
+    &-head {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      text-align: left;
       cursor: pointer;
-      padding: 15px 0;
-      position: relative;
-      &::after {
-        content: "";
-        background-image: url("../img/svg/plus.svg");
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-      }
-      p {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      span {
         font-weight: 600;
         font-size: 20px;
       }
-      &.active::after {
-        content: "";
-        background-image: url("../img/svg/minus.svg");
-        background-repeat: no-repeat;
-        height: 3px;
+      img{
+        margin-left: auto;
+      }
+      img.active{
+        display: none;
       }
     }
     &-body {
       padding-bottom: 15px;
+      display: none;
       p {
         font-weight: 400;
         font-size: 16px;

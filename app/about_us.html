@@ -256,7 +256,7 @@
 </div>
 
       <div class="section_video">
-  <video controls poster="img/preview.png" preload="none">
+  <video controls poster="img/preview.png" preload="none" autoplay>
     <source src="" type="video/mp4" />
   </video>
 </div>
@@ -264,11 +264,13 @@
       <div class="section_about_us_question">
   <div class="container">
     <h2 class="section_title title">Часто задоваемые вопросы</h2>
-    <ul class="accordion" data-accordion="open">
+    <ul class="accordion no-mult" id="accordion">
       <li>
-        <div class="accordion-header">
-          <p>Вопрос</p>
-        </div>
+        <button class="accordion-head">
+          <span>Вопрос</span>
+          <img src="img/svg/plus.svg" alt="" />
+          <img class="active" src="img/svg/minus.svg" alt="" />
+        </button>
         <div class="accordion-body">
           <p>
             Ответ в раскрытом виде Ответ в раскрытом виде Ответ в раскрытом виде

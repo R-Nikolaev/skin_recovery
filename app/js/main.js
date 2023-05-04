@@ -7,24 +7,22 @@
   \******************************/
 /***/ (() => {
 
-var accordion = function () {
-  var data = $(".accordion").attr("data-accordion");
-  $(".accordion-header").on("click", function () {
-    if (data === "close") {
-      $(".accordion-body").slideUp();
-      if ($(this).hasClass("active")) {
-        $(this).toggleClass("active");
-      } else {
-        $(".accordion-header").removeClass("active");
-        $(this).toggleClass("active");
-      }
-    } else {
-      $(this).toggleClass("active");
-    }
-    $(this).next("accordion-body").not(":animated").slideToggle();
+(function ($) {
+  //
+  $(".accordion").each(function (i, el) {
+    var multiple = $(this).hasClass("mult");
+    $(this).find(".accordion-head").on("click", function () {
+      var active = $(this).hasClass("active");
+      $body = $(this).next();
+      $body.slideToggle();
+      $(this).parent().toggleClass("open");
+      $(this).parent().toggleClass("active");
+      if (!multiple) $(el).find(".accordion-body").not($body).slideUp().parent().removeClass("open");
+    });
   });
-};
-accordion();
+
+  //
+})(jQuery);
 
 /***/ }),
 
@@ -159,14 +157,13 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper_hero"
   }
 });
 const swiperStock = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper_stock", {
-  loop: "true",
   slidesPerView: 4,
   breakpoints: {
     0: {
       slidesPerView: 3
     },
     785: {
-      slidesPerView: 3
+      slidesPerView: 2.5
     },
     928: {
       slidesPerView: 4
@@ -194,7 +191,6 @@ const swiperService = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swipe
   }
 });
 const swiperResult = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper_result", {
-  loop: "true",
   slidesPerView: 4,
   spaceBetween: 10,
   breakpoints: {

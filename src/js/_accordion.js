@@ -1,21 +1,19 @@
-var accordion = function () {
-  var data = $(".accordion").attr("data-accordion");
+(function ($) {
+  //
+  $(".accordion").each(function (i, el) {
+    var multiple = $(this).hasClass("mult");
 
-  $(".accordion-header").on("click", function () {
-    if (data === "close") {
-      $(".accordion-body").slideUp();
-      if ($(this).hasClass("active")) {
-        $(this).toggleClass("active");
-      } else {
-        $(".accordion-header").removeClass("active");
-        $(this).toggleClass("active");
-      }
-    } else {
-      $(this).toggleClass("active");
-    }
-    $(this).next("accordion-body").not(":animated").slideToggle();
+    $(this).find(".accordion-head").on("click", function () {
+      var active =$(this).hasClass("active");
+      $body = $(this).next();
+      $body.slideToggle();
+      $(this).parent().toggleClass("open");
+      $(this).parent().toggleClass("active");
+      if (!multiple) $(el).find(".accordion-body").not($body).slideUp().parent().removeClass("open");
+    });
   });
-};
+  
+  //
+})(jQuery);
 
-accordion();
 

@@ -30,9 +30,6 @@
     p {
       font-weight: 400;
       font-size: 12px;
-      @include media("<xl") {
-        font-size: 8px;
-      }
     }
   }
   &-menu {
@@ -48,7 +45,7 @@
         color: #013e37;
         padding-bottom: 10px;
         @include media("<xl") {
-          font-size: 10px;
+          font-size: 14px;
           padding-bottom: 8px;
         }
         &:first-child {

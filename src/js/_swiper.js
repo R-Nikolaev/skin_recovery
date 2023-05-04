@@ -14,7 +14,6 @@ const swiper = new Swiper(".swiper_hero", {
   },
 });
 const swiperStock = new Swiper(".swiper_stock", {
-  loop: "true",
   slidesPerView: 4,
 
   breakpoints: {
@@ -22,7 +21,7 @@ const swiperStock = new Swiper(".swiper_stock", {
           slidesPerView: 3,
       },
       785: {
-          slidesPerView: 3,
+          slidesPerView: 2.5,
       },
       928: {
           slidesPerView: 4,
@@ -52,7 +51,6 @@ const swiperService = new Swiper(".swiper_service", {
   },
 });
 const swiperResult = new Swiper(".swiper_result", {
-  loop: "true",
   slidesPerView: 4,
   spaceBetween: 10,
 

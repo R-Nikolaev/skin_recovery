@@ -1,8 +1,10 @@
 .section_image {
+  
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
   overflow: hidden;
+
   .big_img {
     grid-column: 1 / span 12;
     grid-row: 1;
