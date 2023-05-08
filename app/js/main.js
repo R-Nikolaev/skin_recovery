@@ -163,10 +163,11 @@ const swiperStock = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper_
       slidesPerView: 3
     },
     785: {
-      slidesPerView: 2.5
+      slidesPerView: 3.5
     },
     928: {
-      slidesPerView: 4
+      slidesPerView: 4,
+      spaceBetween: 20
     }
   }
 });

@@ -1,0 +1,134 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #013e37;
+  padding: 22px 37px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 10px;
+
+  @include media("<xl") {
+    font-size: 14px;
+  }
+}
+
+.section_title {
+  font-family: "Gabriola";
+  font-size: 120px;
+  font-weight: 400;
+  color: #013e37;
+
+  @include media("<xl") {
+    font-size: 75px;
+  }
+}
+.section_subtitle {
+  font-family: "DM Serif Text";
+  font-size: 20px;
+  font-weight: 400;
+  color: #013e37;
+  span {
+    font-weight: 600;
+  }
+}
+
+.kursiv {
+  font-family: "Liana";
+  font-size: 100px;
+  white-space: nowrap;
+  @include media("<xl") {
+    font-size: 80px;
+  }
+  @include media("<ll") {
+    font-size: 60px;
+  }
+}
+
+.component-list {
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #1a3835;
+    padding: 20px 0;
+    position: relative;
+    border-top: 1px solid #8fc2bc;
+
+    &:last-child {
+      border-bottom: 1px solid #8fc2bc;
+    }
+    @include media("<xl") {
+      font-size: 14px;
+      padding: 5px 0;
+    }
+    b {
+      font-weight: 600;
+      font-size: 20px;
+      @include media("<xl") {
+        font-size: 16px;
+      }
+    }
+  }
+}
+.btn-square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 200px;
+  padding: 64px 46px;
+  background-color: #adcbc6;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+
+  @include media("<xl") {
+    padding: 44px 26px;
+    font-size: 15px;
+  }
+}
+.slider_content {
+  display: flex;
+  flex-direction: column;
+  height: initial;
+  font-size: 20px;
+  font-weight: 600;
+  color: #013e37;
+
+  .slider_image {
+    position: relative;
+    img{
+      width: 100%;
+    }
+    a {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 1;
+    }
+  }
+    .slider {
+      &-title {
+        padding: 15px 0;
+      }
+      &-desc {
+        font-size: 16px;
+        font-weight: 400;
+      }
+      &-price {
+        padding: 25px 0;
+        text-align: right;
+        margin-top: auto;
+      }
+    }
+    .btn{
+      margin: 0 19%;
+    }
+  }
+

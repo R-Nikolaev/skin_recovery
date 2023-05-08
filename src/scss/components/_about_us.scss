@@ -23,7 +23,11 @@
       width: 505px;
       height: 505px;
       background-color: #adcbc6;
-      @include media("<xl") {
+      @include media('<xl') {
+        width: 380px;
+        height: 380px;
+      }
+      @include media("<ll") {
         width: 250px;
         height: 250px;
       }
@@ -62,79 +66,49 @@
       }
     }
     .right .text {
-      p {
-        font-family: "Gabriola";
-        font-weight: 400;
-        font-size: 35px;
-        margin: 0;
-        @include media("<xl") {
-          font-size: 24px;
-        }
-        span {
-          font-family: "DM Serif Text";
-          font-size: 45px;
-          @include media("<xl") {
-            font-size: 30px;
-          }
-        }
-      }
-    }
-    .right .list {
-      padding-top: 90px;
+      font-family: "Gabriola";
+      font-size: 35px;
+      color: #013E37;
+      line-height: 1;
       @include media("<xl") {
-        padding-top: 30px;
+        font-size: 24px;
       }
-      li {
-        @include flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-        position: relative;
-        border-top: 1px solid #8fc2bc;
-        &:last-child {
-          border-bottom: 1px solid #8fc2bc;
-        }
-        @include media('<xl') {
-          padding: 5px 0;
+      span {
+        font-family: "DM Serif Text";
+        font-size: 45px;
+        @include media("<xl") {
+          font-size: 30px;
         }
       }
     }
+.component-list{
+padding: 90px 20px 0 0;
+@include media('<xl') {
+  padding: 20px 5px 0 0;
+}
+}
   }
   .bottom {
     justify-content: space-between;
     &-item {
       width: 48%;
+      display: flex;
+      flex-direction: column;
+      font-family: "Gabriola";
+      font-size: 18px;
+      color: #013e37;
       img {
+        padding-bottom: 10px;
+        max-width: 10%;
         @include media("<xl") {
-          max-width: 10%;
+          padding-bottom: 5px;
         }
       }
-      p {
-        font-size: 16px;
+      span {
         @include media("<xl") {
           font-size: 14px;
         }
       }
-    }
-  }
-  .btn-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 0;
-    top: 200px;
-    width: 150px;
-    height: 150px;
-    background-color: #adcbc6;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-
-    @include media("<xl") {
-      width: 100px;
-      height: 100px;
-      font-size: 15px;
     }
   }
 }

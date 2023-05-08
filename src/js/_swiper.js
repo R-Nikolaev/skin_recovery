@@ -21,10 +21,11 @@ const swiperStock = new Swiper(".swiper_stock", {
           slidesPerView: 3,
       },
       785: {
-          slidesPerView: 2.5,
+          slidesPerView: 3.5,
       },
       928: {
           slidesPerView: 4,
+          spaceBetween: 20,
       },
   },
 

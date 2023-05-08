@@ -21,6 +21,8 @@ $im-no-media-breakpoint: 'xxl';
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/components";
+
 @import "./components/header";
 @import "./components/menu";
 @import "./components/hero";
@@ -38,3 +40,4 @@ $im-no-media-breakpoint: 'xxl';
 @import "./components/about_us_zagolovok";
 @import "./components/about_us_video";
 @import "./components/about_us_question";
+
