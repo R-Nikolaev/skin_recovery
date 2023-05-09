@@ -10,18 +10,8 @@
     }
   }
 }
-// .swiper_stock{
-// height: 650px;
-// @include media('<xl') {
-//   height: 480px;
-// }
-// }
 
 .swiper_service{
-  height: 550px;
-  @include media('<xl') {
-    height: 450px;
-  }
   .swiper-wrapper{
     padding-top: 50px;
   }

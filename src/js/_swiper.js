@@ -44,6 +44,7 @@ const swiperService = new Swiper(".swiper_service", {
     },
     928: {
         slidesPerView: 3,
+        spaceBetween: 20,
     },
 },
   navigation: {

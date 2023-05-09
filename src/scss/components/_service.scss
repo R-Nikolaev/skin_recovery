@@ -1,55 +1,27 @@
 .section_service {
   padding: 70px 0 30px;
   .content {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-  }
-  .left {
-    grid-column: 1 / 4;
-    grid-row: 1;
-    h5 {
-      font-family: "DM Serif Text";
-      font-weight: 400;
-      font-size: 20px;
-      color: #013e37;
-
-      padding-bottom: 35px;
+    display: flex;
+    .section_title {
+      width: 30%;
+      h3 {
+        margin-top: -20px;
+        padding-bottom: 30px;
+      }
       span {
-        font-weight: 600;
+        font-size: 18px;
       }
     }
-    p {
-      font-family: "Gabriola";
-      font-weight: 400;
-      font-size: 18px;
-      color: #013e37;
-    }
   }
-  .right {
-    grid-column: 5 / -1;
-    grid-row: 1;
+  .slider {
+    width: 68%;
+    margin-left: auto;
     justify-content: center;
     align-items: center;
 
     padding: 90px 0 30px;
-    @include media('<xl') {
+    @include media("<xl") {
       padding: 63px 0 21px;
-    }
-
-    * > h5 {
-      color: #013e37;
-    }
-    .slider_content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      height: 500px;
-      width: 267px;
-      @include media('<xl') {
-        height: 380px;
-        width: 200px;
-      }
     }
   }
 }

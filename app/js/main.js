@@ -183,7 +183,8 @@ const swiperService = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swipe
       slidesPerView: 2
     },
     928: {
-      slidesPerView: 3
+      slidesPerView: 3,
+      spaceBetween: 20
     }
   },
   navigation: {
