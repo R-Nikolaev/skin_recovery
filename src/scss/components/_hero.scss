@@ -1,23 +1,36 @@
 .hero {
-  padding: 130px 0 10px;
+  padding: 130px 0 80px;
   position: relative;
   overflow-x: hidden;
+  &::before {
+    content: "Skin Recovery";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "DM Serif Text";
+    white-space: nowrap;
+    font-size: 500px;
+    color: #f9f9f9;
+    @include media('>d2k') {
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%,-50%,0);
+    }
+  }
   &-slide {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: initial;
   }
   .slide {
     &_text {
-      grid-column: 1 / span 12;
-      grid-row: 1;
-
+      max-width: 100%;
       font-family: "DM Serif Text";
-      font-style: normal;
-      font-weight: 400;
       color: #013e37;
       text-align: center;
+      padding-bottom: 20px;
       h1 {
         font-size: 150px;
         @include media("<xl") {
@@ -27,90 +40,18 @@
           font-size: 80px;
         }
       }
-      h3 {
+      h2 {
         font-size: 20px;
-        line-height: 12px;
       }
     }
     &_image {
-      grid-column: 2 / span 10;
-      grid-row: 2 / span 10;
-      position: relative;
-      img {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        z-index: -1;
-        transform: translate3d(-50%, -50%, 0);
-      }
-    }
-    // &_slide {
-    //   @include flex-v-center;
-    //   flex-direction: column;
-    //   height: 650px;
-    // }
-    // .slide {
-    //   &_text {
-    //     @include flex-v-center;
-    //     flex-direction: column;
-    //     text-align: center;
-
-    //     font-family: "DM Serif Text";
-    //     font-style: normal;
-    //     font-weight: 400;
-    //     color: #013e37;
-
-    //     h1 {
-    //       font-size: 150px;
-    //       @include media("<xl") {
-    //         font-size: 120px;
-    //       }
-    //       @include media("<lg") {
-    //         font-size: 80px;
-    //       }
-    //     }
-
-    //     h3 {
-    //       padding-bottom: 15px;
-
-    //       font-size: 20px;
-    //       line-height: 12px;
-    //     }
-    //   }
-
-    //   &_image{
-    //     position: absolute;
-    //     left: 50%;
-    //     bottom: 3%;
-    //     transform: translateX(-50%);
-    //   }
-    &_shadowtext {
-      position: absolute;
-      left: 0;
-      top: 30%;
-      z-index: -1;
-      @include media('>=d2k') {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      img {
-        max-width: none;
-      }
+      max-width: 90%;
     }
   }
   .btn {
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 5%;
     transform: translateX(-50%);
-    // position: absolute;
-    // bottom: 7%;
-    // padding: 2% 3%;
-    // background-color: #013e37;
-    // border-radius: 10px;
-    a {
-      color: #fff;
-      text-transform: uppercase;
-    }
   }
 }

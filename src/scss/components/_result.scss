@@ -6,7 +6,6 @@
     align-items: flex-start;
     justify-content: space-between;
     height: initial;
-    padding-bottom: 300px;
   }
   .left {
     display: flex;
@@ -33,7 +32,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      bottom:-40px;
+      bottom: -40px;
       z-index: 1;
       color: #013e37;
     }
@@ -57,30 +56,10 @@
     @include media("<xl") {
       padding-top: 50px;
     }
-    .slider_content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      height: 545px;
-      width: 267px;
-
-      @include media("<xl") {
-        width: 200px;
-        height: 400px;
-      }
-      h5,
-      p {
-        color: #013e37;
-      }
-      p {
-        text-align: left;
-        margin-left: 10px;
-        font-weight: 400;
-        font-size: 16px;
-        @include media("<xl") {
-          font-size: 10px;
-        }
+    .slider{
+      &-desc{
+        margin-bottom: auto;
+        padding: 25px 0;
       }
     }
   }

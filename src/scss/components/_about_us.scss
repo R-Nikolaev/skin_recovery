@@ -23,7 +23,7 @@
       width: 505px;
       height: 505px;
       background-color: #adcbc6;
-      @include media('<xl') {
+      @include media("<xl") {
         width: 380px;
         height: 380px;
       }
@@ -68,7 +68,7 @@
     .right .text {
       font-family: "Gabriola";
       font-size: 35px;
-      color: #013E37;
+      color: #013e37;
       line-height: 1;
       @include media("<xl") {
         font-size: 24px;
@@ -81,12 +81,12 @@
         }
       }
     }
-.component-list{
-padding: 90px 20px 0 0;
-@include media('<xl') {
-  padding: 20px 5px 0 0;
-}
-}
+    .component-list {
+      padding: 90px 20px 0 0;
+      @include media("<xl") {
+        padding: 20px 5px 0 0;
+      }
+    }
   }
   .bottom {
     justify-content: space-between;

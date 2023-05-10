@@ -1,33 +1,24 @@
 .section_write_us {
   background-color: #edf8f6;
   margin-top: -4px;
-  height: 800px;
-@include media('<xl') {
-  height: 600px;
-}
-@include media('<ll') {
-  height: 500px;
-}
+  height: initial;
   .ctr {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    height: 100%;
+    display: flex;
   }
   .left {
-    grid-column: 1 / 7;
-    grid-row: 1;
+    width: 50%;
     background-color: #adcbc6;
-    position: relative;
     .form {
       width: 90%;
-      padding: 20% 0 10% 8%;
+      padding: 20% 0 25% 8%;
       display: flex;
       flex-direction: column;
-      @include media('<xl') {
+      @include media("<xl") {
         padding: 15% 0 15% 8%;
       }
-      h3 {
+      .section_title {
         color: #fff;
+        line-height: 0.8;
       }
       input {
         padding: 30px 0 6px;
@@ -36,54 +27,44 @@
         border-bottom: 1px solid #fff;
         border-radius: none;
         box-shadow: none;
-        font-family: "Montserrat";
-        font-weight: 400;
         font-size: 18px;
         color: #ffffff;
-        @include media('<xl') {
+        @include media("<xl") {
           font-size: 12px;
         }
         &::placeholder {
           color: #fff;
         }
       }
-      .form-message{
-        padding-top:66px;
-        @include media('<xl') {
-         padding-top: 50px;
+      .form-message {
+        padding-top: 66px;
+        @include media("<xl") {
+          padding-top: 50px;
         }
       }
-      .btn{
-        position: absolute;
-        bottom: 15%;
-        right: 10%;
-        @include media('<ll') {
-          bottom: 8%;
-        }
+      .btn {
+        margin-top: 50px;
+        margin-left: auto;
       }
     }
   }
   .right {
     position: relative;
-    grid-column: 7 / -1;
-    grid-row: 1;
-
-    img{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%,-50%,0);
-      @include media('<xl') {
-        width: 50%;
-      }
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 60%;
     }
-    p{
-      color: #013E37;
+    .kursiv {
+      color: #013e37;
       position: absolute;
       top: 72%;
       left: 50%;
       transform: translateX(-50%);
-      @include media('<ll') {
+      @include media("<ll") {
         top: 68%;
       }
     }

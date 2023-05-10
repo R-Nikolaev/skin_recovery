@@ -158,6 +158,7 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper_hero"
 });
 const swiperStock = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper_stock", {
   slidesPerView: 4,
+  spaceBetween: 20,
   breakpoints: {
     0: {
       slidesPerView: 3
@@ -166,15 +167,14 @@ const swiperStock = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper_
       slidesPerView: 3.5
     },
     928: {
-      slidesPerView: 4,
-      spaceBetween: 20
+      slidesPerView: 4
     }
   }
 });
 const swiperService = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper_service", {
   loop: "true",
   slidesPerView: 3,
-  spaceBetween: 10,
+  spaceBetween: 20,
   breakpoints: {
     0: {
       slidesPerView: 2
@@ -183,8 +183,7 @@ const swiperService = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swipe
       slidesPerView: 2
     },
     928: {
-      slidesPerView: 3,
-      spaceBetween: 20
+      slidesPerView: 3
     }
   },
   navigation: {
@@ -194,7 +193,7 @@ const swiperService = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swipe
 });
 const swiperResult = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper_result", {
   slidesPerView: 4,
-  spaceBetween: 10,
+  spaceBetween: 20,
   breakpoints: {
     0: {
       slidesPerView: 3

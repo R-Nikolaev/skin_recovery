@@ -7,48 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="theme-color" content="#111111" />
   <title>Skin Recovery</title>
-  <!-- <link
-    rel="preload"
-    href="fonts/Montserrat-Light.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="fonts/Montserrat-Regular.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="fonts/Montserrat-SemiBold.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="fonts/Montserrat-Bold.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="fonts/DMSerifText-Regular.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="fonts/Liana-Regular.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  /> -->
   <link rel="stylesheet" href="css/vendor.css" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
@@ -173,16 +131,13 @@
 
     <main class="main">
       <div class="hero">
-  <div class="slide_shadowtext">
-    <img loading="lazy" src="img/svg/shadow_text.svg" />
-  </div>
   <div class="container">
     <div class="swiper swiper_hero">
       <div class="swiper-wrapper">
         <div class="swiper-slide hero-slide">
           <div class="slide_text">
             <h1>Skin Recovery</h1>
-            <h3>Салон коррекции и ухода за фигурой</h3>
+            <h2>Салон коррекции и ухода за фигурой</h2>
           </div>
           <div class="slide_image">
             <img
@@ -193,10 +148,7 @@
               height="371"
             />
           </div>
-          <a class="btn" href="#"
-            >Подробнее Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            In, dolorem!</a
-          >
+          <a class="btn" href="#">Подробнее</a>
         </div>
       </div>
       <div class="swiper-pagination hero-pagination"></div>
@@ -471,49 +423,41 @@
     <div class="bottom">
       <div class="swiper swiper_result">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="slider_content">
-              <div class="slider_image">
-                <img loading="lazy" src="img/result_slide_1.jpg" />
-              </div>
-              <h5 class="fz20m">Масло для кожи</h5>
-              <p class="desc">
-                Масло из натуральных трав, для чувствительной кожи.
-              </p>
-              <a href="#" class="btn btn-result">Подробнее</a>
+          <div class="swiper-slide slider_content">
+            <div class="slider_image">
+              <img loading="lazy" src="img/result_slide_1.jpg" />
             </div>
+            <b>Масло для кожи</b>
+            <div class="slider-desc">
+              Масло из натуральных трав, для чувствительной кожи.
+            </div>
+            <a href="#" class="btn">Подробнее</a>
           </div>
-          <div class="swiper-slide">
-            <div class="slider_content">
-              <div class="slider_image">
-                <img loading="lazy" src="img/result_slide_2.jpg" />
-              </div>
-              <h5 class="fz20m">Гель для кожи</h5>
-              <p class="desc">Помогает убрать, сухую кожу .</p>
-              <a href="#" class="btn btn-result">Подробнее</a>
+          <div class="swiper-slide slider_content">
+            <div class="slider_image">
+              <img loading="lazy" src="img/result_slide_2.jpg" />
             </div>
+            <b>Гель для кожи</b>
+            <div class="slider-desc">Помогает убрать, сухую кожу .</div>
+            <a href="#" class="btn">Подробнее</a>
           </div>
-          <div class="swiper-slide">
-            <div class="slider_content">
-              <div class="slider_image">
-                <img loading="lazy" src="img/result_slide_3.jpg" />
-              </div>
-              <h5 class="fz20m">Вода для похудения</h5>
-              <p class="desc">
-                Убирает тяжесть, наполняте организм кислородом.
-              </p>
-              <a href="#" class="btn btn-stock">Подробнее</a>
+          <div class="swiper-slide slider_content">
+            <div class="slider_image">
+              <img loading="lazy" src="img/result_slide_3.jpg" />
             </div>
+            <b>Вода для похудения</b>
+            <div class="slider-desc">
+              Убирает тяжесть, наполняте организм кислородом.
+            </div>
+            <a href="#" class="btn">Подробнее</a>
           </div>
-          <div class="swiper-slide">
-            <div class="slider_content">
-              <div class="slider_image">
-                <img loading="lazy" src="img/result_slide_4.jpg" />
-              </div>
-              <h5 class="fz20m">Гель для похудения</h5>
-              <p class="desc">Сжигает жир и чистит кожу.</p>
-              <a href="#" class="btn btn-result">Подробнее</a>
+          <div class="swiper-slide slider_content">
+            <div class="slider_image">
+              <img loading="lazy" src="img/result_slide_4.jpg" />
             </div>
+            <b>Гель для похудения</b>
+            <div class="slider-desc">Сжигает жир и чистит кожу.</div>
+            <a href="#" class="btn">Подробнее</a>
           </div>
         </div>
       </div>
@@ -530,17 +474,19 @@
   <div class="ctr">
     <div class="left">
       <form class="form" action="/">
-        <h3 class="section_title">Напишите нам</h3>
+        <div class="section_title">
+          <h2>Напишите нам</h2>
+        </div>
         <input type="text" placeholder="Имя" />
         <input type="email" placeholder="E-mail" />
         <input type="tel" placeholder="+7 (___)__ - __ - __" />
         <input class="form-message" type="text" placeholder="Сообщение" />
-        <button class="btn" type="submit">Отправить</button>
+        <a class="btn" type="submit">Отправить</a>
       </form>
     </div>
     <div class="right">
       <img src="img/write_us.jpg" alt="" />
-      <p class="kursiv">Спасибо</p>
+      <div class="kursiv">Спасибо</div>
     </div>
   </div>
 </div>
