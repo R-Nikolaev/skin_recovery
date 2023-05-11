@@ -787,7 +787,7 @@ a {
 .section_image {
   position: relative;
   overflow-x: hidden;
-  min-height: 1000px;
+  min-height: 600px;
 }
 .section_image .big_img {
   position: absolute;
@@ -804,6 +804,12 @@ a {
   z-index: 2;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
+}
+@media (max-width: 1199px) {
+  .section_image .min_img {
+    max-height: 40vh;
+    left: calc(50% + 200px);
+  }
 }
 .section_image span {
   font-family: "DM Serif Text";
