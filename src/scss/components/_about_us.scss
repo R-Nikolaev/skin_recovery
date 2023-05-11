@@ -13,101 +13,106 @@
   }
   .top {
     padding: 220px 0 68px;
+    justify-content: space-around;
     @include media("<xl") {
       padding: 160px 0 40px;
     }
 
     .left {
+      display: flex;
+      flex-direction: column;
       position: relative;
-      flex-shrink: 0;
-      width: 505px;
-      height: 505px;
-      background-color: #adcbc6;
-      @include media("<xl") {
-        width: 380px;
-        height: 380px;
-      }
-      @include media("<ll") {
-        width: 250px;
-        height: 250px;
-      }
-      img,
-      p {
+      width: 45%;
+      align-items: center;
+      justify-content: center;
+      margin-top: -156px;
+      &::before {
+        content: "";
         position: absolute;
-        bottom: 150px;
         left: 50%;
+        top: 26%;
         transform: translateX(-50%);
-
+        width: 100%;
+        height: 79%;
+        z-index: 1;
+        background-color: #adcbc6;
         @include media("<xl") {
-          bottom: 70px;
+          width: 80%;
+          height: 69%;
+          left: 50%;
+          top: 34%;
+        }
+        @include media('<ll') {
+          width: 100%;
         }
       }
       img {
-        max-width: 90%;
+        max-width: 366px;
+        max-height: 503px;
+        z-index: 2;
         @include media("<xl") {
-          width: 70%;
+          max-width: 266px;
+          max-height: 403px;
+        }
+        @include media("<xl") {
+          max-width: 216px;
+          max-height: 353px;
         }
       }
-      p {
-        bottom: 87px;
+      .kursiv{
+        position: absolute;
+        bottom: 5%;
         color: #fff;
-
-        @include media("<xl") {
-          bottom: 40px;
-          font-size: 50px;
-        }
+        z-index: 2;
       }
     }
     .right {
-      padding: 0 70px;
-
-      @include media("<xl") {
-        padding: 0 20px;
-      }
+      width: 47%;
     }
-    .right .text {
-      font-family: "Gabriola";
-      font-size: 35px;
-      color: #013e37;
-      line-height: 1;
-      @include media("<xl") {
-        font-size: 24px;
-      }
-      span {
-        font-family: "DM Serif Text";
-        font-size: 45px;
-        @include media("<xl") {
-          font-size: 30px;
-        }
-      }
+  }
+  .right .text {
+    font-family: "Gabriola";
+    font-size: 35px;
+    color: #013e37;
+    line-height: 1;
+    padding-right: 15px;
+    @include media("<xl") {
+      font-size: 24px;
     }
-    .component-list {
-      padding: 90px 20px 0 0;
+    span {
+      font-family: "DM Serif Text";
+      font-size: 45px;
       @include media("<xl") {
-        padding: 20px 5px 0 0;
+        font-size: 30px;
       }
     }
   }
-  .bottom {
-    justify-content: space-between;
-    &-item {
-      width: 48%;
-      display: flex;
-      flex-direction: column;
-      font-family: "Gabriola";
-      font-size: 18px;
-      color: #013e37;
-      img {
-        padding-bottom: 10px;
-        max-width: 10%;
-        @include media("<xl") {
-          padding-bottom: 5px;
-        }
+  .component-list {
+    padding: 90px 20px 0 0;
+    @include media("<xl") {
+      padding: 20px 5px 0 0;
+    }
+  }
+}
+.bottom {
+  justify-content: space-between;
+  &-item {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Gabriola";
+    font-size: 18px;
+    color: #013e37;
+    img {
+      padding-bottom: 10px;
+      max-width: 10%;
+      @include media("<xl") {
+        padding-bottom: 5px;
       }
-      span {
-        @include media("<xl") {
-          font-size: 14px;
-        }
+    }
+    span {
+      @include media("<xl") {
+        font-size: 14px;
       }
     }
   }
