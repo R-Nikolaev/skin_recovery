@@ -16,7 +16,6 @@
       $body = $(this).next();
       $body.slideToggle();
       $(this).parent().toggleClass("open");
-      $(this).parent().toggleClass("active");
       if (!multiple) $(el).find(".accordion-body").not($body).slideUp().parent().removeClass("open");
     });
   });

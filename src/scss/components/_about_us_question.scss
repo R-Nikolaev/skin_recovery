@@ -1,63 +1,19 @@
 .section_about_us_question {
   padding: 35px 0 100px;
-  position: relative;
   .container {
-    padding-right: 150px;
+    position: relative;
   }
-  .accordion > * span {
-    font-family: "Montserrat";
-    color: #013e37;
+  .section_title{
+    max-width: 65%;
+    line-height: .8;
+    padding-bottom: 65px;
   }
-  .accordion {
-    li {
-      border-bottom: 1px solid #adcbc6;
-      &:first-child {
-        border-top: 1px solid #adcbc6;
-      }
-    }
-    &-head {
-      width: 100%;
-      border: 0;
-      background: transparent;
-      text-align: left;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      padding: 15px;
-      span {
-        font-weight: 600;
-        font-size: 20px;
-      }
-      img{
-        margin-left: auto;
-      }
-      img.active{
-        display: none;
-      }
-    }
-    &-body {
-      padding-bottom: 15px;
-      display: none;
-      p {
-        font-weight: 400;
-        font-size: 16px;
-      }
-    }
-  }
-
-  .btn-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+  .btn-square{
+    padding: 81px 74px;
+    top: 0;
     right: 0;
-    top: 35px;
-    width: 150px;
-    height: 150px;
-    background-color: #adcbc6;
-    border: none;
-    color: #fff;
-    font-size: 20px;
+    @include media('<xl') {
+      padding: 61px 54px;
+    }
   }
 }
-
