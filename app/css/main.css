@@ -212,7 +212,7 @@ a {
   justify-content: center;
   background-color: #013e37;
   padding: 22px 37px;
-  margin: 0 19%;
+  max-width: 190px;
   border: none;
   color: #fff;
   font-size: 16px;
@@ -1421,6 +1421,104 @@ a {
   .section_about_us_question .btn-square {
     padding: 61px 54px;
   }
+}
+
+.section_card_hero .path {
+  font-size: 12px;
+  font-weight: 300;
+  color: #adcbc6;
+}
+.section_card_hero .card_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #013e37;
+}
+.section_card_hero .card_content .slider {
+  width: 50%;
+}
+.section_card_hero .card_content .info {
+  width: 48%;
+  margin-left: auto;
+}
+.section_card_hero .card_content .info_title {
+  font-weight: 600;
+  padding-bottom: 40px;
+}
+.section_card_hero .card_content .info_title h2 {
+  font-size: 36px;
+}
+.section_card_hero .card_content .info_title h3 {
+  font-size: 20px;
+}
+.section_card_hero .card_content .info_characteristic .volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+.section_card_hero .card_content .info_characteristic .volume span {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.section_card_hero .card_content .info_characteristic .volume ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.section_card_hero .card_content .info_characteristic .volume ul li {
+  padding-right: 5px;
+}
+.section_card_hero .card_content .info_characteristic .volume ul li button {
+  background-color: inherit;
+  border: 1px solid #adcbc6;
+  border-radius: 10px;
+  padding: 20px;
+  color: #013E37;
+}
+.section_card_hero .card_content .info_characteristic .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+.section_card_hero .card_content .info_characteristic .quantity .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 33%;
+  max-width: 190px;
+  margin-right: auto;
+  border: 1px solid #adcbc6;
+  border-radius: 10px;
+}
+.section_card_hero .card_content .info_characteristic .quantity .counter button {
+  width: 33%;
+  background-color: inherit;
+  border: none;
+  font-size: 20px;
+  color: #013E37;
+}
+.section_card_hero .card_content .info_characteristic .quantity .counter input {
+  width: 33%;
+  border: none;
+}
+.section_card_hero .card_content .info_characteristic .quantity .btn {
+  max-width: 300px;
+  width: 68%;
+  background-color: #00A594;
+}
+.section_card_hero .card_content .info_characteristic .quantity > span {
+  padding-top: 8px;
+  font-size: 14px;
+  color: #00A594;
 }
 /*# sourceMappingURL=main.css.map */
 /*# sourceMappingURL=main.css.map */

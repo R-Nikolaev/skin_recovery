@@ -1,0 +1,87 @@
+.section_card_hero {
+  .path {
+    font-size: 12px;
+    font-weight: 300;
+    color: #adcbc6;
+  }
+  .card_content {
+    display: flex;
+    color: #013e37;
+    .slider {
+      width: 50%;
+    }
+    .info {
+      width: 48%;
+      margin-left: auto;
+      &_title {
+        font-weight: 600;
+        padding-bottom: 40px;
+        h2 {
+          font-size: 36px;
+        }
+        h3 {
+          font-size: 20px;
+        }
+      }
+      &_characteristic {
+        .volume {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 30px;
+          span {
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: 15px;
+          }
+          ul {
+            display: flex;
+            li {
+              padding-right: 5px;
+              button {
+                background-color: inherit;
+                border: 1px solid #adcbc6;
+                border-radius: 10px;
+                padding: 20px;
+                color:#013E37;
+              }
+            }
+          }
+        }
+        .quantity {
+          display: flex;
+          flex-wrap: wrap;
+          padding-bottom: 50px;
+          .counter {
+            display: flex;
+            width: 33%;
+            max-width: 190px;
+            margin-right: auto;
+            border: 1px solid #adcbc6;
+            border-radius: 10px;
+            button{
+              width: 33%;
+              background-color: inherit;
+              border: none;
+              font-size: 20px;
+              color:#013E37;
+            }
+            input{
+              width: 33%;
+              border: none;
+            }
+          }
+          .btn {
+            max-width:300px;
+            width: 68%;
+           background-color: #00A594;
+          }
+           > span{
+            padding-top: 8px;
+            font-size: 14px;
+            color: #00A594;
+          }
+        }
+      }
+    }
+  }
+}
