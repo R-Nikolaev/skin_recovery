@@ -428,6 +428,7 @@ a {
 }
 .accordion-body {
   padding-bottom: 15px;
+  display: none;
 }
 
 .header {
