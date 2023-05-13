@@ -8,10 +8,28 @@
     display: flex;
     color: #013e37;
     .slider {
-      width: 50%;
+      max-height: 800px;
+      width: 58%;
+      display: flex;
+      &_images {
+        width: 78%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &_thumbs {
+        width: 20%;
+        .card-slide {
+          opacity: 0.4;
+        }
+        .swiper-slide-active{
+          opacity: 1;
+        }
+      }
     }
     .info {
-      width: 48%;
+      width: 38%;
       margin-left: auto;
       &_title {
         font-weight: 600;
@@ -42,7 +60,7 @@
                 border: 1px solid #adcbc6;
                 border-radius: 10px;
                 padding: 20px;
-                color:#013E37;
+                color: #013e37;
               }
             }
           }
@@ -58,27 +76,28 @@
             margin-right: auto;
             border: 1px solid #adcbc6;
             border-radius: 10px;
-            button{
+            button {
               width: 33%;
               background-color: inherit;
               border: none;
               font-size: 20px;
-              color:#013E37;
+              color: #013e37;
             }
-            input{
+            input {
               width: 33%;
               border: none;
+              text-align: center;
             }
           }
           .btn {
-            max-width:300px;
+            max-width: 300px;
             width: 68%;
-           background-color: #00A594;
+            background-color: #00a594;
           }
-           > span{
+          > span {
             padding-top: 8px;
             font-size: 14px;
-            color: #00A594;
+            color: #00a594;
           }
         }
       }

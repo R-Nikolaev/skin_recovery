@@ -18,17 +18,16 @@ const swiperStock = new Swiper(".swiper_stock", {
   spaceBetween: 20,
 
   breakpoints: {
-      0: {
-          slidesPerView: 3,
-      },
-      785: {
-          slidesPerView: 3.5,
-      },
-      928: {
-          slidesPerView: 4,
-      },
+    0: {
+      slidesPerView: 3,
+    },
+    785: {
+      slidesPerView: 3.5,
+    },
+    928: {
+      slidesPerView: 4,
+    },
   },
-
 });
 const swiperService = new Swiper(".swiper_service", {
   loop: "true",
@@ -37,15 +36,15 @@ const swiperService = new Swiper(".swiper_service", {
 
   breakpoints: {
     0: {
-        slidesPerView: 2,
+      slidesPerView: 2,
     },
     785: {
-        slidesPerView: 2,
+      slidesPerView: 2,
     },
     928: {
-        slidesPerView: 3,
+      slidesPerView: 3,
     },
-},
+  },
   navigation: {
     nextEl: ".service-next",
     prevEl: ".service-prev",
@@ -57,13 +56,32 @@ const swiperResult = new Swiper(".swiper_result", {
 
   breakpoints: {
     0: {
-        slidesPerView: 3,
+      slidesPerView: 3,
     },
     785: {
-        slidesPerView: 3,
+      slidesPerView: 3,
     },
     928: {
-        slidesPerView: 4,
+      slidesPerView: 4,
     },
-},
+  },
+});
+
+const sliderThumbs = new Swiper(".slider_thumbs", {
+  direction: "vertical",
+  slidesPerView: 3,
+  spaceBetween: 10,
+  freeMode: true,
+});
+const sliderImages = new Swiper(".slider_images", {
+  slidesPerView: 1,
+  mousewheel: true,
+  navigation: {
+    nextEl: ".card-next",
+    prevEl: ".card-prev",
+  },
+  grabCursor: true,
+  thumbs: {
+    swiper: sliderThumbs,
+  },
 });
