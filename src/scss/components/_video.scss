@@ -1,10 +1,14 @@
-.section_video{
+.section_video,
+.section_card_video {
   video {
     width: 100%;
     height: auto;
     max-height: 100%;
   }
   video::-webkit-media-controls {
-    display:none !important;
+    display: none !important;
   }
+}
+.section_card_video {
+  padding-top: 70px ;
 }

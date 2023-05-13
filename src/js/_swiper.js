@@ -72,15 +72,14 @@ const sliderThumbs = new Swiper(".slider_thumbs", {
   slidesPerView: 3,
   spaceBetween: 10,
   freeMode: true,
+  watchSlidesProgress: true,
 });
 const sliderImages = new Swiper(".slider_images", {
   slidesPerView: 1,
-  mousewheel: true,
   navigation: {
     nextEl: ".card-next",
     prevEl: ".card-prev",
   },
-  grabCursor: true,
   thumbs: {
     swiper: sliderThumbs,
   },

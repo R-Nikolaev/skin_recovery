@@ -53,9 +53,6 @@
   }
   .bottom {
     padding-top: 100px;
-    @include media("<xl") {
-      padding-top: 50px;
-    }
     .slider{
       &-desc{
         margin-bottom: auto;

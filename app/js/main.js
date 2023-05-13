@@ -209,16 +209,15 @@ const sliderThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".slider
   direction: "vertical",
   slidesPerView: 3,
   spaceBetween: 10,
-  freeMode: true
+  freeMode: true,
+  watchSlidesProgress: true
 });
 const sliderImages = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".slider_images", {
   slidesPerView: 1,
-  mousewheel: true,
   navigation: {
     nextEl: ".card-next",
     prevEl: ".card-prev"
   },
-  grabCursor: true,
   thumbs: {
     swiper: sliderThumbs
   }

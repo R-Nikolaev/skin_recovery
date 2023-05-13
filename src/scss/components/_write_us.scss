@@ -4,6 +4,8 @@
   height: initial;
   .ctr {
     display: flex;
+    max-width: 2000px;
+    margin: 0 auto;
   }
   .left {
     width: 50%;

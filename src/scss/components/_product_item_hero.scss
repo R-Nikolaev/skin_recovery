@@ -6,6 +6,7 @@
   }
   .card_content {
     display: flex;
+    flex-wrap: wrap;
     color: #013e37;
     .slider {
       max-height: 800px;
@@ -23,7 +24,7 @@
         .card-slide {
           opacity: 0.4;
         }
-        .swiper-slide-active{
+        .swiper-slide-active {
           opacity: 1;
         }
       }
@@ -60,6 +61,7 @@
                 border: 1px solid #adcbc6;
                 border-radius: 10px;
                 padding: 20px;
+                cursor: pointer;
                 color: #013e37;
               }
             }
@@ -69,9 +71,10 @@
           display: flex;
           flex-wrap: wrap;
           padding-bottom: 50px;
+          color: #00A594;
           .counter {
             display: flex;
-            width: 33%;
+            width: 30%;
             max-width: 190px;
             margin-right: auto;
             border: 1px solid #adcbc6;
@@ -92,15 +95,23 @@
           .btn {
             max-width: 300px;
             width: 68%;
+            white-space: nowrap;
             background-color: #00a594;
           }
-          > span {
-            padding-top: 8px;
-            font-size: 14px;
-            color: #00a594;
+          button {
+            cursor: pointer;
+            span {
+              padding-top: 8px;
+              font-size: 14px;
+              color: #ADCBC6;
+            }
           }
         }
       }
+    }
+    > .accordion {
+      padding-top: 75px;
+      width: 100%;
     }
   }
 }
