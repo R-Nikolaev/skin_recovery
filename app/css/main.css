@@ -525,6 +525,9 @@ a {
   background-color: var(--accent-color);
   color: #fff;
 }
+.site-header .top .menu-item.last:hover a svg path[fill], .site-header .top .menu-item.last a:hover svg path[fill] {
+  fill: #fff;
+}
 .site-header .top .menu-item:hover a svg path[fill], .site-header .top .menu-item a:hover svg path[fill] {
   fill: var(--dark-light-color);
 }

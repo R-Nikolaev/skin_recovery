@@ -28,6 +28,10 @@
         background-color: var(--accent-color);
         color: #fff;
       }
+      &.last:hover a svg path[fill],
+      &.last a:hover svg path[fill]{
+        fill: #fff;
+      }
       &:hover a svg path[fill],
       & a:hover svg path[fill] {
         fill: var(--dark-light-color);
@@ -35,7 +39,6 @@
       &:hover + .menu-item::before {
         opacity: 0;
       }
-
       &.last::after,
       &::before,
       &:last-child::after {
