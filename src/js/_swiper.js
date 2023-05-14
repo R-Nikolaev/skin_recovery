@@ -3,7 +3,7 @@ Swiper.use([Navigation, Pagination]);
 
 const swiper = new Swiper(".swiper_hero", {
   slidesPerView: "auto",
-  speed: 500,
+  speed: 800,
   effect: 'fade',
 
   pagination: {
