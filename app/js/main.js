@@ -146,7 +146,8 @@ __webpack_require__.r(__webpack_exports__);
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
 const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper_hero", {
   slidesPerView: "auto",
-  loop: "true",
+  speed: 500,
+  effect: 'fade',
   pagination: {
     el: ".hero-pagination"
   },
