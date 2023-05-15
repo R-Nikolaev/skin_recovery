@@ -1,0 +1,23 @@
+.section_product_item_result {
+padding-bottom:60px;
+background: #EDF8F6;
+.section_title{
+  padding-bottom: 0;
+}
+  .swiper_result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .slider-desc {
+      margin-bottom: auto;
+      padding-bottom: 25px;
+    }
+    > .btn-product{
+      width: 400px;
+      height: 80px;
+      margin-top: 55px;
+      background-color: #ADCBC6;
+      color: #fff;
+    }
+  }
+}

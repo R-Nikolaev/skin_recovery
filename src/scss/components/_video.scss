@@ -1,13 +1,14 @@
 .section_video,
-.section_card_video {
+.section_product_item_video {
   video {
     width: 100%;
-    height: auto;
+    height: 100vh;
     max-height: 100%;
+    object-fit: cover;
   }
-  video::-webkit-media-controls {
-    display: none !important;
-  }
+  // video::-webkit-media-controls {
+  //   display: none !important;
+  // }
 }
 .section_card_video {
   padding-top: 70px ;

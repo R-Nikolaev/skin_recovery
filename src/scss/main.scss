@@ -29,7 +29,7 @@ $im-no-media-breakpoint: 'xxl';
 @import "./components/swiper";
 @import "./components/about_us";
 @import "./components/stock";
-@import "./components/image";
+@import "./components/marquee";
 @import "./components/service";
 @import "./components/result";
 @import "./components/video";
@@ -41,4 +41,7 @@ $im-no-media-breakpoint: 'xxl';
 @import "./components/about_us_question";
 
 @import "./components/product_item_hero";
+@import "./components/product_item_result";
+@import "./components/product_item_related";
+@import "./components/product_item_mass_media";
 

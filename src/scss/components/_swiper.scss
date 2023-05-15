@@ -1,38 +1,40 @@
-.swiper{
+.swiper {
   .swiper-button::after {
     color: var(--accent-color);
     font-size: 24px;
   }
-  .swiper-pagination-bullet{
+  .swiper-pagination-bullet {
     bottom: 0;
-   &-active{
+    &-active {
       background-color: var(--accent-color);
     }
   }
 }
 
-.swiper_service{
-  .swiper-wrapper{
+.swiper_service,
+.swiper_service2,
+.swiper_result {
+  .swiper-wrapper {
     padding-top: 50px;
   }
   .swiper-button::after {
-    color:#200E32;
+    color: #200e32;
     font-size: 20px;
   }
   .swiper-button-prev,
-  .swiper-button-next{
-top: 4%;
-@include media('<xl') {
-  right: 2%;
-}
-@include media('<ll') {
-  right: 7%;
-}
+  .swiper-button-next {
+    top: 3%;
+    @include media("<xl") {
+      right: 2%;
+    }
+    @include media("<ll") {
+      right: 0;
+    }
   }
-  .swiper-button-prev{
-    left:90%;
-    @include media('<ll') {
-      left: 80%;
+  .swiper-button-prev {
+    left: 93%;
+    @include media("<ll") {
+      left: 90%;
     }
   }
 }
