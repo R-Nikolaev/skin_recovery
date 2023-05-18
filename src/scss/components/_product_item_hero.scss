@@ -14,6 +14,12 @@
       max-height: 800px;
       width: 58%;
       display: flex;
+      @include media('<xl') {
+        max-height: 600px;
+      }
+      @include media('<ll') {
+        max-height: 500px;
+      }
       &_images {
         width: 78%;
         .product_item-next,
@@ -54,9 +60,15 @@
         padding-bottom: 40px;
         h2 {
           font-size: 36px;
+          @include media('<xl') {
+            font-size: 28px;
+          }
         }
         h3 {
           font-size: 20px;
+          @include media('<xl') {
+            font-size: 16px;
+          }
         }
       }
       &_characteristic {
@@ -80,6 +92,11 @@
                 padding: 20px;
                 cursor: pointer;
                 color: #013e37;
+                transition:background-color .2s linear ;
+                &:hover{
+                  background-color: #00a594;
+                  color: #fff;
+                }
               }
             }
           }
