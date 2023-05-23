@@ -1,5 +1,8 @@
 .btn,
-.btn-product {
+.btn-product,
+.btn-training,
+.btn-map,
+.btn-distribution-form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,21 +21,58 @@
     font-size: 14px;
   }
 
-  &-product{
+  &-product {
     width: 270px;
     height: 50px;
     background-color: inherit;
     color: #013e37;
-    border: 1px solid #ADCBC6;
+    border: 1px solid #adcbc6;
     border-radius: 0;
-    transition:background-color,linear,.2s;
-    &:hover{
-      background-color: #ADCBC6;
+    transition: background-color, linear, 0.2s;
+    &:hover {
+      background-color: #adcbc6;
       color: #fff;
     }
-    @include media('<xl') {
+    @include media("<xl") {
       width: 200px;
     }
+  }
+  &-training {
+    width: 135px;
+    height: 40px;
+    background-color: rgba(0, 165, 148, 1);
+    color: #fff;
+    border-radius: 0;
+    text-transform: none;
+  }
+  &-map {
+    width: 170px;
+    height: 50px;
+    border: 1px solid #ff4310;
+    border-radius: 0;
+    color: #ff4310;
+    background-color: inherit;
+    span {
+      position: relative;
+      padding-right: 15px;
+      &::after {
+        content: "";
+        right: -10px;
+        top: -2px;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-top: 1px solid #ff4310;
+        border-right: 1px solid #ff4310;
+        transition: transform 0.4s linear;
+        transform: rotate(135deg);
+      }
+    }
+  }
+  &-distribution-form {
+    background-color: #4f4c18;
+    color: #c0c1a1;
+    margin-left: auto;
   }
 }
 
@@ -52,7 +92,7 @@
     font-size: 20px;
     font-weight: 400;
 
-    span{
+    span {
       font-weight: 600;
     }
   }
@@ -103,7 +143,7 @@
         font-size: 16px;
       }
     }
-    span{
+    span {
       margin-left: auto;
       text-align: right;
     }
@@ -145,7 +185,7 @@
       width: 100%;
       height: 100%;
     }
-   .heart {
+    .heart {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -191,7 +231,7 @@
         height: 2px;
         background-color: #adcbc6;
       }
-      .accordion-body{
+      .accordion-body {
         display: block;
       }
     }
@@ -207,23 +247,23 @@
     font-size: 20px;
     color: inherit;
     position: relative;
-    @include media('<xl') {
+    @include media("<xl") {
       font-size: 16px;
     }
     &::before,
-    &::after{
+    &::after {
       content: "";
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       background-color: #adcbc6;
     }
-    &::before{
+    &::before {
       right: 0;
       width: 16px;
       height: 2px;
     }
-    &::after{
+    &::after {
       right: 7px;
       width: 2px;
       height: 16px;
@@ -233,4 +273,9 @@
     padding: 15px;
     display: none;
   }
+}
+.path {
+  font-size: 12px;
+  font-weight: 300;
+  color: #adcbc6;
 }

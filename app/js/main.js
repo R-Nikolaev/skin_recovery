@@ -25,6 +25,28 @@
 
 /***/ }),
 
+/***/ "./src/js/_btn_map.js":
+/*!****************************!*\
+  !*** ./src/js/_btn_map.js ***!
+  \****************************/
+/***/ (() => {
+
+(function ($) {
+  //
+  $(".select_map").each(function (i, el) {
+    var multiple = $(this).hasClass("mult");
+    $(this).find(".btn-map").on("click", function () {
+      $body = $(this).next();
+      $body.slideToggle();
+      $(this).parent().toggleClass("open");
+      if (!multiple) $(el).find(".btn-map-body").not($body).slideUp().parent().removeClass("open");
+    });
+  });
+  //
+})(jQuery);
+
+/***/ }),
+
 /***/ "./src/js/_components.js":
 /*!*******************************!*\
   !*** ./src/js/_components.js ***!
@@ -130,6 +152,46 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 // };
 
 // validateForms('.form-1', rules1, afterForm);
+
+/***/ }),
+
+/***/ "./src/js/_plyr.js":
+/*!*************************!*\
+  !*** ./src/js/_plyr.js ***!
+  \*************************/
+/***/ (() => {
+
+document.querySelectorAll(".dv-container").forEach(c => {
+  var v = c.querySelector("video"),
+    playing = false,
+    noControls = c.classList.contains("no-controls");
+  v.controls = false;
+  v.addEventListener("click", e => {
+    if (playing) {
+      playing = false;
+      if (noControls) v.pause();
+    } else {
+      playing = true;
+      if (v.controls == false) v.play();
+      if (!noControls) v.controls = true;
+    }
+  });
+  v.addEventListener("keydown", e => {
+    if (e.code === "Space") e.preventDefault(), v.click();
+  });
+  v.addEventListener("playing", () => {
+    c.classList.add("v--playing"), c.classList.remove("v--pause", "v--ended");
+  });
+  v.addEventListener("pause", () => {
+    c.classList.add("v--pause"), c.classList.remove("v--playing", "v--ended");
+  });
+  v.addEventListener("ended", () => {
+    c.classList.add("v--ended"), c.classList.remove("v--pause", "v--playing");
+    playing = false;
+    v.controls = false;
+    // v.load(); //?fix - show poster after ended
+  });
+});
 
 /***/ }),
 
@@ -679,6 +741,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _swiper__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_swiper__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_accordion */ "./src/js/_accordion.js");
 /* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_accordion__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _plyr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_plyr */ "./src/js/_plyr.js");
+/* harmony import */ var _plyr__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_plyr__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _btn_map__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_btn_map */ "./src/js/_btn_map.js");
+/* harmony import */ var _btn_map__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_btn_map__WEBPACK_IMPORTED_MODULE_7__);
+
+
 
 
 

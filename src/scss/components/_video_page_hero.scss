@@ -1,0 +1,41 @@
+.section_video_page_hero {
+  padding: 50px;
+  .videos {
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  video.def {
+    width: 590px;
+    height: calc(590px / 16 * 9);
+    // aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .dv-container {
+    &:after {
+      width: 80px;
+      height: 80px;
+      margin: -60px 0 0 -50px;
+      background-size: 15px;
+     @include media('<lg') {
+       width: 60px;
+       height: 60px;
+       background-size: 10px;
+       background-position: calc(50% + 2px) calc(50% + 0px);
+       margin: -30px 0 0 -30px;
+     }
+    }
+  }
+  span {
+    color: #013e37;
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 10px;
+    &:nth-child(2n + 1) {
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+}
