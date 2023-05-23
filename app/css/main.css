@@ -1989,28 +1989,22 @@ a {
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #1A716C;
+  color: #1a716c;
 }
 @media (max-width: 1023px) {
   .section_training_hero .table .col:nth-child(n+1):nth-child(-n+6) {
     font-size: 16px;
   }
 }
-.section_training_hero .table .col.date {
-  width: 10%;
-}
+.section_training_hero .table .col.date,
 .section_training_hero .table .col.format {
   width: 10%;
 }
 .section_training_hero .table .col.kurs {
   width: 35%;
 }
-.section_training_hero .table .col.trener {
-  width: 15%;
-}
-.section_training_hero .table .col.uslovia {
-  width: 15%;
-}
+.section_training_hero .table .col.trener,
+.section_training_hero .table .col.uslovia,
 .section_training_hero .table .col.zapis {
   width: 15%;
 }
