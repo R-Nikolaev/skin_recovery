@@ -2287,15 +2287,18 @@ a {
 }
 
 .section_contacs_hero {
-  background-color: #edf8f6;
+  padding-top: 40px;
 }
 .section_contacs_hero .ctr {
+  background-color: #edf8f6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 auto;
   max-width: 2000px;
-  height: 100vh;
 }
 .section_contacs_hero .image_blok {
   background-color: #adcbc6;
@@ -2314,6 +2317,7 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 10% 0;
 }
 .section_contacs_hero .image_blok img {
   max-width: 60%;
@@ -2393,7 +2397,9 @@ a {
   }
 }
 .section_contacs_hero .form_blok .form .section_title {
+  width: 100%;
   line-height: 0.8;
+  padding-bottom: 0;
 }
 .section_contacs_hero .form_blok .form input {
   width: 100%;
