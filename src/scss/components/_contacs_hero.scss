@@ -1,0 +1,94 @@
+.section_contacs_hero {
+  background-color: #edf8f6;
+  .ctr {
+    display: flex;
+    margin: 0 auto;
+    max-width: 2000px;
+    height: 100vh;
+  }
+  .image_blok {
+    background-color: #adcbc6;
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 60%;
+    }
+    .kursiv {
+      color: #4f4c18;
+      position: absolute;
+      top: 72%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include media("<ll") {
+        top: 68%;
+      }
+    }
+  }
+  .form_blok {
+    width: 50%;
+    color: #013e37;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .adress {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      span:nth-child(-n + 2) {
+        width: 45%;
+        padding-bottom: 20px;
+        text-align: left;
+      }
+      span:nth-child(n + 3) {
+        width: 90%;
+        padding-bottom: 40px;
+      }
+    }
+    .form {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include media("<xl") {
+        padding: 15% 0 15% 8%;
+      }
+      .section_title {
+        line-height: 0.8;
+      }
+      input {
+        width: 100%;
+        padding: 30px 0 6px;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #013e37;
+        border-radius: none;
+        box-shadow: none;
+        font-size: 18px;
+        color: inherit;
+        @include media("<xl") {
+          font-size: 12px;
+        }
+        &::placeholder {
+          color: inherit;
+        }
+      }
+      .form-message {
+        padding-top: 66px;
+        @include media("<xl") {
+          padding-top: 50px;
+        }
+      }
+      .btn {
+        margin-top: 50px;
+        margin-left: auto;
+      }
+    }
+  }
+}

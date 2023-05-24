@@ -5,44 +5,36 @@
     flex-direction: column;
     .row {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-wrap: nowrap;
+      &:first-child {
+        background-color: rgba(0, 165, 148, 0.3);
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #1a716c;
+        & .col {
+          border: none;
+        }
+      }
     }
     .col {
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #000;
-      text-align: center;
       padding: 15px;
+      color: #000;
+      width: fit-content;
+      text-align: center;
       border: 3px solid rgba(0, 165, 148, 0.3);
-      @include media("<ll") {
-        padding: 5px;
+      &:nth-child(n - 2) {
+        width: 9%;
       }
-
-      &:nth-child(n + 1):nth-child(-n + 6) {
-        background-color: rgba(0, 165, 148, 0.3);
-        border: none;
-        font-size: 20px;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #1a716c;
-        @include media("<ll") {
-          font-size: 16px;
-        }
+      &:nth-child(3) {
+        width: 37%;
       }
-    }
-    .col.date,
-    .col.format {
-      width: 10%;
-    }
-    .col.kurs {
-      width: 35%;
-    }
-    .col.trener,
-    .col.uslovia,
-    .col.zapis {
-      width: 15%;
+      &:nth-child(n + 4) {
+        width: 15%;
+      }
     }
   }
 }
